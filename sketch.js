@@ -68,7 +68,7 @@ let ysixth201;
 let yseventh;
 let yseventh01;
 
-var L=100;
+
 
 var startX=200;
 var startY=330;
@@ -84,8 +84,8 @@ let tint=80;
   let cc=125;
 let sliderspace=100;
 function setup() {
-  createCanvas(windowWidth, windowWidth*0.55);
-//   createCanvas(windowWidth, windowWidth*0.55).parent('p5');
+//   createCanvas(windowWidth, windowWidth*0.55);
+  createCanvas(windowWidth, windowWidth*0.55).parent('p5');
   //  let button =createButton("reset sketch");
   // button.mousePressed(resetSketch);
 
@@ -186,13 +186,13 @@ slider1 = new Slider(windowWidth*0.25, height-55, 150, 12, 50, 20, 2, [220, 220,
 function draw() {
   background(245);
   
-
-  
+ let s=windowWidth/1420;
+  var L=100*s;
     let c1=color(0, tint);
   let c2=color(0, tint);
   
-  let unit=slider1.value;
-  let space=slider2.value;
+  let unit=slider1.value*s;
+  let space=slider2.value*s;
   let ratio=slider3.value;
   slider1.x=windowWidth*0.25-slider1.width*0.5;
     slider2.x=windowWidth*0.5-slider2.width*0.5;
@@ -215,8 +215,8 @@ function draw() {
   
     //----------step3---------------
   //-----X
-  let xw = map(mouseX, 4*(width/8), 0, 0, 0.1*width);
-  let xw01 = map(mouseX, 0, width, 0, 0.1*width);
+  let xw = map(mouseX, 4*(windowWidth/8), 0, 0, 0.1*windowWidth);
+  let xw01 = map(mouseX, 0, windowWidth, 0, 0.1*windowWidth);
 
   let x01 = map(mouseX, 0, width, width*0.6, 0);
   let x0101 = map(mouseX, 0, width, 0, width*-0.13);
@@ -707,7 +707,6 @@ i=0;
   
 
   
-scale(windowWidth/1420);
   startX=(windowWidth-(space)*8+(space-L))*0.5;
   
   startY=height/2-(L*ratio*0.01)/2-45;
