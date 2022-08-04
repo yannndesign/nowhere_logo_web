@@ -85,7 +85,7 @@ let tint=80;
 let sliderspace=100;
 function setup() {
 //   createCanvas(windowWidth, 780+(windowWidth-1700)*0.3);
-  createCanvas(windowWidth, windowWidth*0.55).parent('p5');
+  createCanvas(windowWidth, 780+(windowWidth-1700)*0.3).parent('p5');
   //  let button =createButton("reset sketch");
   // button.mousePressed(resetSketch);
 
