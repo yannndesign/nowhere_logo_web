@@ -84,16 +84,16 @@ let tint=80;
   let cc=125;
 let sliderspace=100;
 function setup() {
-//   createCanvas(windowWidth, windowWidth*0.55);
-  createCanvas(windowWidth, windowWidth*0.55).parent('p5');
+  createCanvas(windowWidth, 780+(windowWidth-1700)*0.3);
+  // createCanvas(windowWidth, windowWidth*0.55).parent('p5');
   //  let button =createButton("reset sketch");
   // button.mousePressed(resetSketch);
 
 
   	// constructor(x, y, width, height, range, startValue, minValue, color,txt)
-slider1 = new Slider(windowWidth*0.25, height-55, 150, 12, 50, 20, 2, [220, 220, 220],'Weight');
-	slider2 = new Slider(windowWidth*0.5, height-55, 150, 12, 400, 140, 100, [220, 220, 220],'Traking');
-	slider3 = new Slider(windowWidth*0.75, height-55, 150, 12, 300, 125, 50, [220, 220, 220], 'Ratio');
+slider1 = new Slider(windowWidth*0.25, height-55, 150*(windowWidth/1420), 12, 50, 20, 2, [220, 220, 220],'Weight');
+	slider2 = new Slider(windowWidth*0.5, height-55, 150*(windowWidth/1420), 12, 400, 140, 100, [220, 220, 220],'Traking');
+	slider3 = new Slider(windowWidth*0.75, height-55, 150*(windowWidth/1420), 12, 300, 125, 50, [220, 220, 220], 'Ratio');
 
   // weight=createSlider(2, 50,20);
   // weight.position(width*0.25, height-35);
