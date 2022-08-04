@@ -707,7 +707,7 @@ i=0;
   
 
   
-
+scale(windowWidth/1420);
   startX=(windowWidth-(space)*8+(space-L))*0.5;
   
   startY=height/2-(L*ratio*0.01)/2-45;
